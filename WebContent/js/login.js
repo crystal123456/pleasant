@@ -63,8 +63,6 @@ function login(){
 	        		getOther();
 	        	    showMsg("验证码错误！");
 		            return false;
-	        	}else if(d.check=="failStatus"){//未激活页面
-	        	    window.location.href = "user/userLoginAction!noStatus.action";
 	        	}
 	        },
 			error: function (xhttp, textStatus, errorThrown) { 

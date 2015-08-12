@@ -12,21 +12,6 @@ import org.apache.commons.lang.StringUtils;
 
 /**
  * Class ApplicationConfig 
- * 
- * @author 朱忠玉
- * @version $Revision:0.1,$Date: 2011-10-9$
- * 
- *          Description: 读取配置文件变量类
- * 
- *          Function List: // 主要函数及其功能
- * 
- *          1. -------
- * 
- *          History: // 历史修改记录
- * 
- *          <author> <time> <version > <desc>
- * 
- *          1. 朱忠玉 2011-10-9 0.1 创建
  */
 public class ApplicationConfig {
 	//绑定bind.properties文件
