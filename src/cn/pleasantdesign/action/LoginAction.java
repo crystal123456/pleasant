@@ -37,14 +37,22 @@ public class LoginAction extends BaseAction {
 	 * @throws IOException
 	 */
 	public void userNameValidate() throws IOException {
+		// 提供的验证码
 		String jcaptcha = ((String) Struts2Utils.getRequest().getSession().getAttribute("piccode")).toUpperCase();
+		// 用户名
 		String userName = Struts2Utils.getParameter("name");
+		// 密码
 		String password = Struts2Utils.getParameter("pwd");
+		// 用户输入的验证码
 		String jpt = Struts2Utils.getParameter("jpt").toUpperCase();
 		
+		// 调用loginService
 		User user = loginService.validateUserName(userName);
+		
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String dateString = formatter.format(new Date());
+		
+		//用户输入的验证码和提供的验证码是否一致
 		if (null != jcaptcha && !jcaptcha.equals(jpt)) {
 			Struts2Utils.renderJson("{\"check\":\"failjpt\"}");// 验证码不正确
 		} else {
@@ -58,7 +66,7 @@ public class LoginAction extends BaseAction {
 					if (user.getLoginTime() != null) {
 						lastTime = fmt.format(user.getLoginTime());
 					} else {
-						lastTime = fmt.format(new Date());// 首次登入
+						lastTime = fmt.format(new Date());
 					}
 					Struts2Utils.getRequest().getSession().setAttribute("lastTime", lastTime);
 
