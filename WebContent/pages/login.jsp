@@ -47,53 +47,87 @@
     </script>
 </head>
 <body style="background-image: url(../images/login/u0_03.png);">
-<div>
-	<div>
-		<img src="../images/login/u0_01.png" width="100%" height="102" alt="">
-	</div>
-	<div>
-		<img src="../images/login/u0_02.png" width="100%" height="228" alt="">
-	</div>
-	<div>
-		<div style="text-align:center;width:994px;height:498px">
-			<span id="title"><img src="../login/members/dot01.png" width="7" height="6" align="absmiddle" /> 用户登录</span><br /><br />
-            <form action="user/loginAction!loginValidate.action" method="post" name="loginForm">
-            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td width="19%">用户名：</td>
-                    <td width="81%"><input type="text" name="user.userName" id="user.userName" onkeydown= "if(event.keyCode==13)document.getElementById('loginButton').click();"/></td>
-                </tr>
-                <tr>
-                    <td>密码：</td>
-                    <td><input type="password" name="user.password" id="user.password" onkeydown= "if(event.keyCode==13)document.getElementById('loginButton').click();"/>
-                        &nbsp; <img src=".../images/members/dot05.png" width="8" height="9" /> <a href="javascript:toPwdBack();" class="logon_link">忘记密码</a></td>
-                </tr>
-                <tr>
-                    <td>验证码：</td>
-                    <td><input type="text" name="putjcaptcha" id="putjcaptcha" onkeydown= "if(event.keyCode==13)document.getElementById('loginButton').click();"/>
-                        &nbsp;<img id="jcaptcha" src="<%=request.getContextPath()%>/servlet/JcaptchaServlet" width="60" height="22" align="absmiddle" />&nbsp;&nbsp;<a href="javascript:getOther();" class="logon_link">看不清，换一张</a></td>
-                </tr>
-               <tr>
-                    <td colspan="2"><div id="valHtml" style="display: none;"><img src="${ctx }/images/members/error.png" width="16" height="16" align="absmiddle" /> <span  id="msg" class="yellow_font"><font>${msg}</font></span></div></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td><input name="loginButton" type="button" class="home_but" id="loginButton" onclick="login();" value="登 录"/>
-&nbsp;&nbsp; <img src="${ctx }/images/members/dot05.png" width="8" height="9" />&nbsp;<a href="${ctx }/user/userReg!openRegAgreementPage.action" class="logon_link">新用户注册</a></td>
-                </tr>
-                 
-            </table>
-            </form>
-		</div>
-		<!-- <img src="../images/login/u0_04.png" width="994" height="498" alt=""> -->
-	</div>
-	<div>
-		<img src="../images/login/u0_06.png" width="100%" height="122" alt="">
-	</div>
-	<div>
-		<img src="../images/login/u0_07.png" width="100%" height="282" alt="">
-	</div>
-</div>
-<!-- End Save for Web Slices -->
+<table id="__01" width="1920" height="1232" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="4">
+			<img src="images/login_01.png" width="1920" height="104" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/login_02.png" width="1920" height="226" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/login_03.png" width="462" height="500" alt=""></td>
+		<td>
+		<table width="614" height="500">
+        	<tr>
+            	<td>
+                	登录
+                </td>
+                <td>
+                	还没有账号？
+                    <a>去注册</a>
+                </td>
+                <td>
+                </td>
+            </tr>
+            	<td>
+                	用户名：
+                </td>
+                <td>
+                	<input type="text" name="user.userName" id="user.userName" onkeydown= "if(event.keyCode==13)document.getElementById('loginButton').click();"/>
+                </td>
+                <td>
+                </td>
+            <tr>
+            	<td>
+                	密码：
+                </td>
+                <td>
+                	<input type="password" name="user.password" id="user.password" onkeydown= "if(event.keyCode==13)document.getElementById('loginButton').click();"/>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+            	<td>
+                	验证码：
+                </td>
+                <td>
+                	<input type="text" name="putjcaptcha" id="putjcaptcha" onkeydown= "if(event.keyCode==13)document.getElementById('loginButton').click();"/>
+                	&nbsp;<img id="jcaptcha" src="<%=request.getContextPath()%>/servlet/JcaptchaServlet" width="60" height="22" align="absmiddle" />
+                </td>
+                <td>
+                	<a href="javascript:getOther();" class="logon_link">看不清，换一张</a>
+                </td>
+            </tr>
+            <tr>
+            	<td>
+                </td>
+                <td>
+                	8小时内自动登录
+                </td>
+                <td>
+                	<a href="javascript:toPwdBack();" class="logon_link">忘记密码</a>
+                </td>
+            </tr>
+        </table>
+        
+        </td>
+		<td>
+			<img src="images/login_05.png" width="376" height="500" alt=""></td>
+		<td>
+			<img src="images/login_06.png" width="468" height="500" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/login_07.png" width="1920" height="118" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/login_08.jpg" width="1920" height="284" alt=""></td>
+	</tr>
+</table>
 </body>
 </html>

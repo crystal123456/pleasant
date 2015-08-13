@@ -11,7 +11,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
- * 用户类
+ * 鐢ㄦ埛绫�
  * 
  * @author fred
  *
@@ -20,22 +20,22 @@ import javax.persistence.Table;
 @Table(name="pleasant_user")
 public class User {
 
-	// 用户id
+	// 鐢ㄦ埛id
 	private Long id;
 	
-	// 用户名
+	// 鐢ㄦ埛鍚�
 	private String userName;
 
-	// 密码
+	// 瀵嗙爜
 	private String password;
 
-	// 忘记密码时的提示问题
+	// 蹇樿瀵嗙爜鏃剁殑鎻愮ず闂
 	private String pwdResetPromt;
 
-	// 忘记密码时的问题答案
+	// 蹇樿瀵嗙爜鏃剁殑闂绛旀
 	private String pwdResetAnswer;
 	
-	// 登录时间
+	// 鐧诲綍鏃堕棿
 	private Date loginTime;
 
 	@Id 
@@ -68,6 +68,7 @@ public class User {
 		this.password = password;
 	}
 
+	@Column(name="PWD_RESET_PROMT", length=200)
 	public String getPwdResetPromt() {
 		return pwdResetPromt;
 	}
@@ -76,6 +77,7 @@ public class User {
 		this.pwdResetPromt = pwdResetPromt;
 	}
 
+	@Column(name="PWD_RESET_ANSWER", length=200)
 	public String getPwdResetAnswer() {
 		return pwdResetAnswer;
 	}
@@ -84,6 +86,7 @@ public class User {
 		this.pwdResetAnswer = pwdResetAnswer;
 	}
 
+	@Column(name="LOGIN_TIME")
 	public Date getLoginTime() {
 		return loginTime;
 	}
