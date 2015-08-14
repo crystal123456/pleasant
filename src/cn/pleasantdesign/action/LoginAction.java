@@ -72,7 +72,7 @@ public class LoginAction extends BaseAction {
 
 					loginService.updateLastTime(dateString, user);
 					Struts2Utils.renderJson("{\"check\":\"succ\"}");// 用户名已查到
-					Struts2Utils.getRequest().getSession().setAttribute(WebConstant.SESSION_MEMBERS_BEAN, user);
+					Struts2Utils.getRequest().getSession().setAttribute(WebConstant.SESSION_USER_BEAN, user);
 					Struts2Utils.renderJson("{\"check\":\"failLogin\"}");// 用户名或者密码错误
 				}
 			}
