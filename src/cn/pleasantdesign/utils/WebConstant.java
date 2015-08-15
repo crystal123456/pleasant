@@ -2,7 +2,7 @@ package cn.pleasantdesign.utils;
 
 public class WebConstant {
 	public static final String SESSION_EMPLOYEE_BEAN = "sessionEmployeeBean";        //后台用户session对象
-	public static final String SESSION_MEMBERS_BEAN = "sessionMembersBean";          //前台用户session对象
+	public static final String SESSION_USER_BEAN = "sessionUserBean";          //前台用户session对象
 	public static final String SESSION_LOGIN_TIME = "logintime";                     //登录时间
 	public static final String DESPASS_PUBKEY = "QURDU0lDUlBUT0ZPUkFEQ1NZU1RFTVM=";  //加密公钥
 	public static final String DATA_EXIST = "00";//逻辑存在的数据
