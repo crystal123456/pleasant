@@ -33,36 +33,36 @@ public class LoginAction extends BaseAction {
 	Des3Util des3Util = new Des3Util(ApplicationConfig.PASSWORD_KEY);
 
 	/**
-	 * 验证登陆
+	 * 楠岃瘉鐧婚檰
 	 * @throws IOException
 	 */
 	public void userNameValidate() throws IOException {
-		// 提供的验证码
+		// 鎻愪緵鐨勯獙璇佺爜
 		String jcaptcha = ((String) Struts2Utils.getRequest().getSession().getAttribute("piccode")).toUpperCase();
-		// 用户名
+		// 鐢ㄦ埛鍚�
 		String userName = Struts2Utils.getParameter("name");
-		// 密码
+		// 瀵嗙爜
 		String password = Struts2Utils.getParameter("pwd");
-		// 用户输入的验证码
+		// 鐢ㄦ埛杈撳叆鐨勯獙璇佺爜
 		String jpt = Struts2Utils.getParameter("jpt").toUpperCase();
 		
-		// 调用loginService
+		// 璋冪敤loginService
 		User user = loginService.validateUserName(userName);
 		
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String dateString = formatter.format(new Date());
 		
-		//用户输入的验证码和提供的验证码是否一致
+		//鐢ㄦ埛杈撳叆鐨勯獙璇佺爜鍜屾彁渚涚殑楠岃瘉鐮佹槸鍚︿竴鑷�
 		if (null != jcaptcha && !jcaptcha.equals(jpt)) {
-			Struts2Utils.renderJson("{\"check\":\"failjpt\"}");// 验证码不正确
+			Struts2Utils.renderJson("{\"check\":\"failjpt\"}");// 楠岃瘉鐮佷笉姝ｇ‘
 		} else {
 			if (null != user) {
 				String passwordDes = des3Util.getEncString(password);
 				if (!passwordDes.equals(user.getPassword())) {
-					Struts2Utils.renderJson("{\"check\":\"failLogin\"}");// 用户名或者密码错误
+					Struts2Utils.renderJson("{\"check\":\"failLogin\"}");// 鐢ㄦ埛鍚嶆垨鑰呭瘑鐮侀敊璇�
 				} else {
 					String lastTime = "";
-					SimpleDateFormat fmt = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+					SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 					if (user.getLoginTime() != null) {
 						lastTime = fmt.format(user.getLoginTime());
 					} else {
@@ -71,9 +71,9 @@ public class LoginAction extends BaseAction {
 					Struts2Utils.getRequest().getSession().setAttribute("lastTime", lastTime);
 
 					loginService.updateLastTime(dateString, user);
-					Struts2Utils.renderJson("{\"check\":\"succ\"}");// 用户名已查到
+					Struts2Utils.renderJson("{\"check\":\"succ\"}");// 鐢ㄦ埛鍚嶅凡鏌ュ埌
 					Struts2Utils.getRequest().getSession().setAttribute(WebConstant.SESSION_USER_BEAN, user);
-					Struts2Utils.renderJson("{\"check\":\"failLogin\"}");// 用户名或者密码错误
+					Struts2Utils.renderJson("{\"check\":\"failLogin\"}");// 鐢ㄦ埛鍚嶆垨鑰呭瘑鐮侀敊璇�
 				}
 			}
 		}
@@ -81,7 +81,7 @@ public class LoginAction extends BaseAction {
 	
 	
 	/**
-	 * 验证登入信息
+	 * 楠岃瘉鐧诲叆淇℃伅
 	 * @return
 	 */
 	public String toIndex () 

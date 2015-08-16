@@ -1,102 +1,86 @@
-<?xml version='1.0' encoding='gb2312'?> 
-<!--±íÃ÷½âÎö±¾XMLÎÄ¼şµÄDTDÎÄµµÎ»ÖÃ£¬DTDÊÇDocument Type Definition µÄËõĞ´,¼´ÎÄµµÀàĞÍµÄ¶¨Òå,XML½âÎöÆ÷Ê¹ÓÃDTDÎÄµµÀ´¼ì²éXMLÎÄ¼şµÄºÏ·¨ĞÔ¡£hibernate.sourceforge.net/hibernate-configuration-3.0dtd¿ÉÒÔÔÚHibernate3.1.3Èí¼ş°üÖĞµÄsrc\org\hibernateÄ¿Â¼ÖĞÕÒµ½´ËÎÄ¼ş--> 
-<!DOCTYPE hibernate-configuration PUBLIC 
-          "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
-          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> 
-    <!--ÉùÃ÷HibernateÅäÖÃÎÄ¼şµÄ¿ªÊ¼-->      
-    <hibernate-configuration> 
-    <!--±íÃ÷ÒÔÏÂµÄÅäÖÃÊÇÕë¶Ôsession-factoryÅäÖÃµÄ£¬SessionFactoryÊÇHibernateÖĞµÄÒ»¸öÀà£¬Õâ¸öÀàÖ÷Òª¸ºÔğ±£´æHIbernateµÄÅäÖÃĞÅÏ¢£¬ÒÔ¼°¶ÔSessionµÄ²Ù×÷--> 
-      <session-factory>    
-      <!--ÅäÖÃÊı¾İ¿âµÄÇı¶¯³ÌĞò£¬HibernateÔÚÁ¬½ÓÊı¾İ¿âÊ±£¬ĞèÒªÓÃµ½Êı¾İ¿âµÄÇı¶¯³ÌĞò--> 
-          <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver </property> 
-      <!--ÉèÖÃÊı¾İ¿âµÄÁ¬½Óurl:jdbc:mysql://localhost/hibernate,ÆäÖĞlocalhost±íÊ¾mysql·şÎñÆ÷Ãû³Æ£¬´Ë´¦Îª±¾»ú£¬    hibernateÊÇÊı¾İ¿âÃû-->  
-            <property name="hibernate.connection.url">jdbc:mysql://localhost/hibernate </hibernate> 
-    <!--Á¬½ÓÊı¾İ¿âÊÇÓÃ»§Ãû--> 
-          <property name="hibernate.connection.username">root </property> 
-          <!--Á¬½ÓÊı¾İ¿âÊÇÃÜÂë--> 
-          <property name="hibernate.connection.password">123456 </property>        
-          <!--Êı¾İ¿âÁ¬½Ó³ØµÄ´óĞ¡--> 
-          <property name="hibernate.connection.pool.size">20 </property>        
-        <!--ÊÇ·ñÔÚºóÌ¨ÏÔÊ¾HibernateÓÃµ½µÄSQLÓï¾ä£¬¿ª·¢Ê±ÉèÖÃÎªtrue£¬±ãÓÚ²î´í£¬³ÌĞòÔËĞĞÊ±¿ÉÒÔÔÚEclipseµÄ¿ØÖÆÌ¨ÏÔÊ¾HibernateµÄÖ´ĞĞSqlÓï¾ä¡£ÏîÄ¿²¿Êğºó¿ÉÒÔÉèÖÃÎªfalse£¬Ìá¸ßÔËĞĞĞ§ÂÊ--> 
-        <property name="hibernate.show_sql">true </property> 
-        <!--jdbc.fetch_sizeÊÇÖ¸HibernateÃ¿´Î´ÓÊı¾İ¿âÖĞÈ¡³ö²¢·Åµ½JDBCµÄStatementÖĞµÄ¼ÇÂ¼ÌõÊı¡£Fetch SizeÉèµÄÔ½´ó£¬¶ÁÊı¾İ¿âµÄ´ÎÊıÔ½ÉÙ£¬ËÙ¶ÈÔ½¿ì£¬Fetch SizeÔ½Ğ¡£¬¶ÁÊı¾İ¿âµÄ´ÎÊıÔ½¶à£¬ËÙ¶ÈÔ½Âı--> 
-        <property name="jdbc.fetch_size">50 </property> 
-        <!--jdbc.batch_sizeÊÇÖ¸HibernateÅúÁ¿²åÈë,É¾³ıºÍ¸üĞÂÊ±Ã¿´Î²Ù×÷µÄ¼ÇÂ¼Êı¡£Batch SizeÔ½´ó£¬ÅúÁ¿²Ù×÷µÄÏòÊı¾İ¿â·¢ËÍSqlµÄ´ÎÊıÔ½ÉÙ£¬ËÙ¶È¾ÍÔ½¿ì£¬Í¬ÑùºÄÓÃÄÚ´æ¾ÍÔ½´ó--> 
-        <property name="jdbc.batch_size">23 </property> 
-        <!--jdbc.use_scrollable_resultsetÊÇ·ñÔÊĞíHibernateÓÃJDBCµÄ¿É¹ö¶¯µÄ½á¹û¼¯¡£¶Ô·ÖÒ³µÄ½á¹û¼¯¡£¶Ô·ÖÒ³Ê±µÄÉèÖÃ·Ç³£ÓĞ°ïÖú--> 
-        <property name="jdbc.use_scrollable_resultset">false </property> 
-        <!--connection.useUnicodeÁ¬½ÓÊı¾İ¿âÊ±ÊÇ·ñÊ¹ÓÃUnicode±àÂë--> 
-        <property name="Connection.useUnicode">true </property> 
-        <!--connection.characterEncodingÁ¬½ÓÊı¾İ¿âÊ±Êı¾İµÄ´«Êä×Ö·û¼¯±àÂë·½Ê½£¬×îºÃÉèÖÃÎªgbk£¬ÓÃgb2312ÓĞµÄ×Ö·û²»È«--> 
-    <property name="connection.characterEncoding">gbk </property>      
-        
-        <!--hibernate.dialect Ö»ÊÇHibernateÊ¹ÓÃµÄÊı¾İ¿â·½ÑÔ,¾ÍÊÇÒªÓÃHibernateÁ¬½ÓÄÇÖÖÀàĞÍµÄÊı¾İ¿â·şÎñÆ÷¡£--> 
-          <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect </property> 
-        <!--Ö¸¶¨Ó³ÉäÎÄ¼şÎª¡°hibernate/ch1/UserInfo.hbm.xml¡±-->        
-          <mapping resource="org/mxg/UserInfo.hbm.xml"> 
-  </session-factory> 
-  </hibernate-configuration>    
-  
-  
-  
-  <bean id="dataSource"  
-  class="org.apache.commons.dbcp.BasicDataSource"  
-  destroy-method="close">  
-//Á¬½ÓÇı¶¯    
-  <property name="driverClassName" value="${jdbc.driverClassName}" />  
-//Á¬½Óurl,    
-<property name="url" value="${jdbc.url}" />  
-//Á¬½ÓÓÃ»§Ãû    
-  <property name="username" value="${jdbc.username}" />  
-//Á¬½ÓÃÜÂë    
-  <property name="password" value="${jdbc.password}" />  
-</bean>  
-  
-<bean id="hbSessionFactory"  
-  class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">  
-  <property name="dataSource" ref="dataSource" />  
-  <property name="configLocation">  
-//hibernateÅäÖÃÎÄ¼şÎ»ÖÃ    
-  <value>WEB-INF/hibernate.cfg.xml </value>  
-  </property>  
-  <property name="configurationClass"  
-  value="org.hibernate.cfg.AnnotationConfiguration" />  
-  <property name="hibernateProperties">  
-  <props>  
-  //Õë¶ÔoracleÊı¾İ¿âµÄ·½ÑÔ,ÌØ¶¨µÄ¹ØÏµÊı¾İ¿âÉú³ÉÓÅ»¯µÄSQL    
-    <prop key="hibernate.dialect">  
-    org.hibernate.dialect.OracleDialect    
-    </prop>  
-  //Ñ¡ÔñHQL½âÎöÆ÷µÄÊµÏÖ    
-    <prop key="hibernate.query.factory_class">  
-    org.hibernate.hql.ast.ASTQueryTranslatorFactory    
-    </prop>  
-    //ÊÇ·ñÔÚ¿ØÖÆÌ¨´òÓ¡sqlÓï¾ä    
-    <prop key="hibernate.show_sql">true </prop>  
-    //ÔÚHibernateÏµÍ³²ÎÊıÖĞhibernate.use_outer_join±»´ò¿ªµÄÇé¿öÏÂ,¸Ã²ÎÊıÓÃÀ´ÔÊĞíÊ¹ÓÃouter joinÀ´ÔØÈë´Ë¼¯ºÏµÄÊı¾İ¡£    
-    <prop key="hibernate.use_outer_join">true </prop>  
-  //Ä¬ÈÏ´ò¿ª£¬ÆôÓÃcglib·´ÉäÓÅ»¯¡£cglibÊÇÓÃÀ´ÔÚHibernateÖĞ¶¯Ì¬Éú³ÉPO×Ö½ÚÂëµÄ£¬´ò¿ªÓÅ»¯¿ÉÒÔ¼Ó¿ì×Ö½ÚÂë¹¹ÔìµÄËÙ¶È    
-  <prop key="hibernate.cglib.use_reflection_optimizer">true </prop>  
-  //Êä³ö¸ñÊ½»¯ºóµÄsql,¸ü·½±ã²é¿´    
-  <prop key="hibernate.format_sql">true </prop>  
-  //¡°useUnicode¡±ºÍ¡°characterEncoding¡±¾ö¶¨ÁËËüÊÇ·ñÔÚ¿Í»§¶ËºÍ·şÎñÆ÷¶Ë´«Êä¹ı³ÌÖĞ½øĞĞEncode£¬ÒÔ¼°ÈçºÎ½øĞĞEncode    
-  <prop key="hibernate.connection.useUnicode">true </prop>  
-  //ÔÊĞí²éÑ¯»º´æ, ¸ö±ğ²éÑ¯ÈÔÈ»ĞèÒª±»ÉèÖÃÎª¿É»º´æµÄ.    
-  <prop key="hibernate.cache.use_query_cache">false </prop>  
-  <prop key="hibernate.default_batch_fetch_size">16 </prop>  
-    //Á¬½Ó³ØµÄ×î´ó»î¶¯¸öÊı    
-    <prop key="hibernate.dbcp.maxActive">100 </prop>  
-  //µ±Á¬½Ó³ØÖĞµÄÁ¬½ÓÒÑ¾­±»ºÄ¾¡µÄÊ±ºò£¬DBCP½«ÔõÑù´¦Àí(0 = Ê§°Ü,1 = µÈ´ı,2  =  Ôö³¤)    
-    <prop key="hibernate.dbcp.whenExhaustedAction">1 </prop>  
-    //×î´óµÈ´ıÊ±¼ä    
-    <prop key="hibernate.dbcp.maxWait">1200 </prop>  
-    //Ã»ÓĞÈËÓÃÁ¬½ÓµÄÊ±ºò£¬×î´óÏĞÖÃµÄÁ¬½Ó¸öÊı    
-    <prop key="hibernate.dbcp.maxIdle">10 </prop>  
-    ##ÒÔÏÂÊÇ¶Ôprepared statementµÄ´¦Àí£¬Í¬ÉÏ¡£    
-    <prop key="hibernate.dbcp.ps.maxActive">100 </prop>  
-    <prop key="hibernate.dbcp.ps.whenExhaustedAction">1 </prop>  
-    <prop key="hibernate.dbcp.ps.maxWait">1200 </prop>  
-    <prop key="hibernate.dbcp.ps.maxIdle">10 </prop>  
-  </props>  
-  </property>  
-</bean>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- é©±åŠ¨ -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		
+		<!-- æ•°æ®åº“url
+		jdbc:mysql://192.168.10.222:3306/hibernate_db æŒ‡å®šè¿æ¥ç½‘ç»œæ•°æ®åº“
+		jdbc:mysql:///hibernate_db è¡¨ç¤ºè¿æ¥æœ¬æœºæ•°æ®åº“
+		 -->
+		<property name="hibernate.connection.url">jdbc:mysql:///hibernate_db</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		
+		<!-- æ•°æ®åº“çš„æ–¹è¨€ï¼šæ¯ä¸ªæ•°æ®åº“éƒ½æœ‰åˆ«çš„æ•°æ®åº“æ²¡æœ‰çš„ä¸€äº›ä¸œè¥¿ï¼Œè¿™ä¸ªæ–¹è¨€æ˜¯æ”¯æŒäº‹åŠ¡çš„ï¼Œå…¶ä»–çš„ä¸æ”¯æŒ -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		
+		<!-- å°†æ•°æ®åº“è¯­å¥æ‰“å°å‡ºæ¥ -->
+		<property name="show_sql">true</property>
+		
+		<!-- è‡ªåŠ¨åˆ›å»ºæ•°æ®åº“è¡¨ 
+		create-drop	åœ¨ç¨‹åºå¯åŠ¨çš„æ—¶å€™åˆ›å»ºæ•°æ®åº“è¡¨ï¼Œç¨‹åºé€€å‡ºä¹‹ååˆ é™¤ä¹‹å‰åˆ›å»ºçš„è¡¨ï¼ˆæµ‹è¯•çš„æ—¶å€™ç”¨ï¼‰ï¼ˆè¿™é‡Œçš„ç¨‹åºæŒ‡çš„çš„SessionFactoryï¼‰
+		create		åœ¨ç¨‹åºå¯åŠ¨çš„æ—¶å€™å…ˆåˆ é™¤ä¸Šä¸€æ¬¡åˆ›å»ºçš„è¡¨ï¼Œç„¶åå†åˆ›å»ºæ–°çš„è¡¨ç»“æ„ï¼ˆæµ‹è¯•çš„æ—¶å€™ç”¨ï¼‰
+		update		åœ¨ç¨‹åºå¯åŠ¨çš„æ—¶å€™å¦‚æœæ²¡æœ‰è¡¨å°±åˆ›å»ºè¡¨ï¼Œæœ‰è¡¨çš„è¯å°±æ£€æŸ¥æœ‰æ²¡æœ‰æ›´æ–°ï¼ˆæ¨èä½¿ç”¨ï¼‰
+		validate	åœ¨ç¨‹åºå¯åŠ¨çš„æ—¶å€™æ£€æŸ¥è¡¨ç»“æ„ï¼Œä¸ä¼šåˆ›å»º
+		-->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!-- çº¿ç¨‹å®‰å…¨sessionçš„é…ç½® -->
+		<property name="hibernate.current_session_context_class">thread</property><!-- å¼€å¯çº¿ç¨‹å®‰å…¨çš„session -->
+		
+		<!-- å¯¼å…¥æŒä¹…åŒ–é…ç½®ç±» -->
+		<mapping resource="model\Person.hbm.xml"></mapping>
+		<!-- ç»„ä»¶ç±» -->
+		<mapping resource="model\NewPerson.hbm.xml"></mapping>
+		<!-- åŠ¨æ€ç»„ä»¶ç±» -->
+		<mapping resource="model\NewPerson1.hbm.xml"></mapping>
+		
+		<!-- ç»“åˆç±»é…ç½® -->
+		<mapping resource="model\NewPerson2.hbm.xml"></mapping>
+		
+		<!-- å•è¡¨ç»§æ‰¿é…ç½® -->
+		<mapping resource="jicheng\jichengPerson.hbm.xml"></mapping>
+		<mapping resource="singleTable\inherit\integer\PersonInteger.hbm.xml"></mapping>
+		
+		<!-- å…·ä½“è¡¨ç»§æ‰¿ -->
+		<mapping resource="concreteTable\PersonConcrete.hbm.xml"></mapping>
+		
+		<!-- æ¯ä¸ªç±»å¯¹åº”ä¸€ä¸ªè¡¨ç»§æ‰¿ -->
+		<mapping resource="hiloTable\PersonHilo.hbm.xml"></mapping>
+		
+		<!-- HQL -->
+		<mapping resource="hql\PersonHQL.hbm.xml"></mapping>
+		
+		<!-- åœ¨é…ç½®æ–‡ä»¶ä¸­é…ç½®HQL -->
+		<mapping resource="hqlPeiZhi\PersonHQLPeiZhi.hbm.xml"></mapping>
+		<mapping resource="hqlPeiZhi\query.xml"></mapping>
+		
+		<!-- QBCé…ç½® -->
+		<mapping resource="QBC\PersonQBC.hbm.xml"></mapping>
+		
+		<!-- SQLé…ç½® -->
+		<mapping resource="SQL\PersonSQL.hbm.xml"></mapping>
+		<mapping resource="SQL\query.xml"></mapping>
+		
+		<!-- æ•°æ®æŠ“å–ç­–ç•¥é…ç½® -->
+		<mapping resource="fetch\PersonFetch.hbm.xml"></mapping>
+		
+		<!-- é”çš„é…ç½® -->
+		<mapping resource="lock\PersonLock.hbm.xml"></mapping>
+		
+		<!-- è¿‡æ»¤å™¨çš„é…ç½® -->
+		<mapping resource="filter\PersonFilter.hbm.xml"></mapping>
+		
+		<!-- æ‹¦æˆªå™¨çš„é…ç½® -->
+		<mapping resource="interceptor\PersonInterceptor.hbm.xml"></mapping>
+		<mapping resource="interceptor\AddressInterceptor.hbm.xml"></mapping>
+		
+		<!-- å¤šçº¿ç¨‹sessionå®‰å…¨çš„ç¼“å­˜çš„é…ç½® -->
+		<mapping resource="cache\PersonCache.hbm.xml"></mapping>
+		
+	</session-factory>
+</hibernate-configuration>

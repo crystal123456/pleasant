@@ -45,6 +45,8 @@
       $axure.utils.getOtherPath = function() { return '../resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return '../resources/reload.html'; };
     </script>
+    
+    <script src="../js/login.js"></script><!-- 引入登录需要的js -->
 </head>
 <body style="background-image: url(../images/login/u0_03.png);">
 <table id="__01" width="1920" height="1232" border="0" cellpadding="0" cellspacing="0">
@@ -110,6 +112,15 @@
                 </td>
                 <td>
                 	<a href="javascript:toPwdBack();" class="logon_link">忘记密码</a>
+                </td>
+            </tr>
+            <tr>
+            	<td>
+                </td>
+                <td>
+                	<input name="loginButton" type="button" class="home_but" id="loginButton" onclick="login();" value="登 录"/>
+                </td>
+                <td>
                 </td>
             </tr>
         </table>
