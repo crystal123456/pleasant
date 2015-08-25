@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+margin: 0px;
+padding: 0px;
+font-size: 12px;
+background: #feda14;
+font-family: Microsoft YaHei;
+}
+
+.cooperation{
+	padding: 10px 200px;
+}
+
+.cooperation_before{
+	position: absolute;
+	left: 383px;
+	top: 324px;
+	width: 564px;
+	height: 86px;
+	font-family: '微软雅黑 Regular', '微软雅黑';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 28px;
+	background-image: url('images/cooperation/u6.png');
+}
+
+.cooperation_after{
+	position: absolute;
+	left: 970px;
+	top: 324px;
+	width: 564px;
+	height: 86px;
+	font-family: '微软雅黑 Regular', '微软雅黑';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 28px;
+	background-image: url('images/cooperation/u6.png');
+}
+
+.float_left{
+	float:left;
+}
+
+.div_clear{
+	clear:both;
+}
+
+.word_left{
+	position: absolute;
+	left: 383px;
+	top: 430px;
+	font-family: '微软雅黑 Regular', '微软雅黑';
+	font-weight: 800;
+	font-size: 12px;
+}
+
+.word_right{
+	position: absolute;
+	left: 970px;
+	top: 430px;
+	font-family: '微软雅黑 Regular', '微软雅黑';
+	font-weight: 800;
+	font-size: 12px;
+}
+
+.image_qq_mail{
+	position: absolute;
+	left: 383px;
+	top: 470px;
+}
+
+.margin_top_300{
+	margin-top:300px;
+}

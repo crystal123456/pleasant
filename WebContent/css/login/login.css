@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	background: #f8f8fa;
+	font-family: Microsoft YaHei;
+}
+.login_span {
+	font-size: 14px;
+	color: #787878;
+}
+
+.login_span_small {
+	font-size: 12px;
+	color: #787878;
+}
+
+.login_input{
+	border:1px solid #CBCBCB;
+	height: 40px;
+	width: 300px;
+	border-radius:4px;
+}
+
+.login_input_small{
+	border:1px solid #CBCBCB;
+	height: 40px;
+	width: 200px;
+	border-radius:4px;
+}
+
+.login_header_span{
+	font-size: 24px;
+	color: #787878;
+	font-weight:bold;
+}
+
+.login_link{
+	font-size: 14px;
+	color: #787878;
+}
+
+.login_link_small{
+	font-size: 12px;
+	color: #787878;
+}
+
+.login_button{
+	display: block;
+	height: 45px;
+	width: 250px;
+	line-height: 45px;
+	background: #7a7a7a;
+	color: #fff;
+	text-align: center;
+	border: 0px;
+	cursor: pointer;
+	border-radius: 4px;
+	border-bottom: 3px solid #626161;
+	font-size: 24px;
+	font-family: Microsoft YaHei;
+}
+
+.login_button:hover {
+	background: #515151;
+	color: #fff;
+	border-bottom: 3px solid #323232;
+}
+
+.login_td{
+	height:30px;
+}
+
+.login_background{
+	background-image: url(images/login_04.png);
+	background-repeat: no-repeat
+}
+
+.user_login{
+	padding:10px 200px;
+}
+
+.login_form{
+	position: relative;
+  	left: 15%;
+  	top: 10%;
+}
+
+.white{
+	background:#ffffff;
+}
+
+.input_form{
+	padding:20px 10px;
+	height:300px;
+	wight:400px;
+	border:1px solid #ebebeb;
+}
+
+.image_right{
+	padding:20px 10px;
+	height:300px;
+	border-bottom:1px solid #ebebeb;
+	border-top:1px solid #ebebeb;
+	border-right:1px solid #ebebeb;
+}
+
+a:link {text-decoration:underline;}    /* 未被访问的链接 */
+a:visited {text-decoration:none;} /* 已被访问的链接 */
+a:hover {text-decoration:underline;}   /* 鼠标指针移动到链接上 */
+a:active {text-decoration:underline;}  /* 正在被点击的链接 *

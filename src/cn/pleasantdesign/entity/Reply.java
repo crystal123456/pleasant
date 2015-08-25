@@ -3,26 +3,23 @@ package cn.pleasantdesign.entity;
 import java.util.Date;
 
 /**
- * 帖子回复
+ * 
  * @author fred
  *
  */
 public class Reply {
 	
-	// 回复id
-	private Long id;
-	
-	// 回复内容
+	private int id;
+
 	private String content;
-	
-	// 回复时间
+
 	private Date replyTime;
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

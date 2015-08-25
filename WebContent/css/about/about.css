@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+margin: 0px;
+padding: 0px;
+font-size: 12px;
+background: #feda14;
+font-family: Microsoft YaHei;
+}
+.login_span {
+	font-size: 14px;
+	color: #787878;
+}
+
+.login_span_small {
+	font-size: 12px;
+	color: #787878;
+}
+
+.login_input{
+	border:1px solid #CBCBCB;
+	height: 40px;
+	width: 300px;
+	border-radius:4px;
+}
+
+.login_input_small{
+	border:1px solid #CBCBCB;
+	height: 40px;
+	width: 200px;
+	border-radius:4px;
+}
+
+.login_header_span{
+	font-size: 24px;
+	color: #787878;
+	font-weight:bold;
+}
+
+.login_link{
+	font-size: 14px;
+	color: #787878;
+}
+
+.login_link_small{
+	font-size: 12px;
+	color: #787878;
+}
+
+.login_button{
+	display: block;
+	height: 45px;
+	width: 250px;
+	line-height: 45px;
+	background: #7a7a7a;
+	color: #fff;
+	text-align: center;
+	border: 0px;
+	cursor: pointer;
+	border-radius: 4px;
+	border-bottom: 3px solid #626161;
+	font-size: 24px;
+	font-family: Microsoft YaHei;
+}
+
+.login_button:hover {
+	background: #515151;
+	color: #fff;
+	border-bottom: 3px solid #323232;
+}
+
+.login_td{
+	height:30px;
+}
+
+.login_background{
+	background-image: url(images/login_04.png);
+	background-repeat: no-repeat
+}
+
+.header{
+	background: #d5d5d5;
+	height: 100px;
+	line-height: 22px;
+	box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+}
+
+.about_us{
+	padding:10px 200px;
+}
+
+.login_form{
+	position: relative;
+  	left: 15%;
+  	top: 10%;
+}
+
+.white{
+	background:#ffffff;
+}
+
+.input_form{
+	padding:20px 10px;
+	height:300px;
+	wight:400px;
+	border:1px solid #ebebeb;
+}
+
+.image_right{
+	padding:20px 10px;
+	height:300px;
+	border-bottom:1px solid #ebebeb;
+	border-top:1px solid #ebebeb;
+	border-right:1px solid #ebebeb;
+}
+
+.image_bottom{
+	margin-top:500px;
+}
+
+.div_logo{
+	padding-top:17px;
+	margin-left:100px;
+}
+
+.float_left{
+	float:left;
+}
+
+.word_right{
+	text-align:right;
+}
+
+.div_chinese{
+	margin-left:300px;
+}
+
+.margin_top_30{
+	margin-top:30px;
+}
+
+.margin_left_30{
+	margin-left:30px;
+}
+
+td{
+	margin:0px;
+	padding:0px;
+}
+
+table{
+	border-collapse:collapse;/*去除表格td之间的间隙 */
+}
+
+.div_connect{
+	text-align:center;
+}
+
+.width_100pre{
+	width:100%;
+}
+
+.clear_float{
+	clear:both;
+}
+
+.word_style{
+	color:#564f35;
+}
+a:link {text-decoration:underline;}    /* 未被访问的链接 */
+a:visited {text-decoration:none;} /* 已被访问的链接 */
+a:hover {text-decoration:underline;}   /* 鼠标指针移动到链接上 */
+a:active {text-decoration:underline;}  /* 正在被点击的链接 *

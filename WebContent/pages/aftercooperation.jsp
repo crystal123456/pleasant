@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>登录</title>
-	<link href="../css/login/login.css" type="text/css" rel="stylesheet"/>
- 	<link href="../css/menu/styles.css" type="text/css" rel="stylesheet"/>
- 
+<title>合作后</title>
+	<link href="../css/menu/styles.css" type="text/css" rel="stylesheet"/>
+	<link href="../css/aftercooperation/aftercooperation.css" type="text/css" rel="stylesheet"/>
+
 	<script src="../resources/scripts/jquery-1.7.1.min.js"></script>
     <script src="../resources/scripts/axure/axQuery.js"></script>
     <script src="../resources/scripts/axutils.js"></script>
@@ -30,83 +30,83 @@
     <script src="../resources/scripts/axure/init.temp.js"></script>
   	<script src="../resources/scripts/axure/legacy.js"></script>
     <script src="../js/menu/menu.js"></script>
+    
+    
+    <link rel="stylesheet" href="../css/scrollbar/control.css" type="text/css" />
+    <script type="text/javascript" src="../js/scrollbar/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="../js/scrollbar/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../js/scrollbar/stepBar.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        stepBar.init("stepBar",{
+            step : 3,
+            change : true,
+            animation : true
+        });
+    });
+    </script>
 </head>
 <body>
 <div class="header">
     	<div class="div_logo">
-        	<img src="../images/login/logo.png" alt="" width="198" height="66">
+        	<img src="images/logo.png" alt="" width="198" height="66">
         </div>
     </div>
-    <div >
-    	<div class="user_login">
-        	<img src="../images/login/user_login.png" alt="" width="350" height="107" >
+    <div class="word_position">
+    	<div>
+        	<span class="projects">PROJECTS</span>
         </div>
-	<div class="login_form">
-        <div class="white input_form" style="float:left">
-        	<form>
-        	<table height="100%">
-        	<tr>
-            	<td>
-                	<span class="login_header_span">登录</span>
-                </td>
-                <td>
-                	<span class="login_span">还没有账号？去</span>
-                    <a href="regist.html" class="login_link">注册></a>
-                </td>
-            </tr>
-            <tr>
-            	<td>
-                	<span class="login_span">用户名：</span>
-                </td>
-                <td>
-                    <input type="text" class="login_input"/>                	
-                </td>
-          </tr>
-      <tr>
-            	<td>
-                	<span class="login_span">密&nbsp;码：</span>
-                </td>
-                <td>
-                	<input type="password" class="login_input"/>
-                </td>
-          </tr>
-            <tr>
-            	<td>
-                	<span class="login_span">验证码：</span>
-                </td>
-                <td>
-                	<input type="text" class="login_input_small"/>
-                    &nbsp;<img id="jcaptcha" src="<%=request.getContextPath()%>/servlet/JcaptchaServlet" width="60" height="22" align="absmiddle" />
-                    <a href="javascript:getOther();" class="logon_link">看不清，换一张</a>
-                </td>
-            </tr>
-            <tr>
-            	<td>
-                </td>
-                <td>
-                	<input type="checkbox"/>
-                	<span class="login_span_small">8小时内自动登录</span>
-                    &nbsp;&nbsp;<a href="#" class="login_link">忘记密码</a>
-                </td>
-            </tr>
-            <tr>
-            	<td>
-                </td>
-                <td>
-                	<input type="button" value="登录" class="login_button"/>
-                </td>
-            </tr>
-        </table>
-        </form>
-        </div>
-        <div class="white image_right" style="float:left">
-        	<img src="../images/login/login_right.png" alt="">
-        </div>
+        <div>
+        	<span class="cooperation">合作项目/进度查询</span>
         </div>
     </div>
+    
+    
+    <div class="margin_top_10">
+        <div id="stepBar" class="ui-stepBar-wrap">
+            <div class="ui-stepBar">
+                <div class="ui-stepProcess"></div>
+            </div>
+            <div class="ui-stepInfo-wrap">
+                <table class="ui-stepLayout" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="ui-stepInfo">
+                            <a class="ui-stepSequence">1</a>
+                            <p class="ui-stepName">注册</p>
+                        </td>
+                        <td class="ui-stepInfo">
+                            <a class="ui-stepSequence">2</a>
+                            <p class="ui-stepName">填写验证信息</p>
+                        </td>
+                        <td class="ui-stepInfo">
+                            <a class="ui-stepSequence">3</a>
+                            <p class="ui-stepName">填写基本信息</p>
+                        </td>
+                        <td class="ui-stepInfo">
+                            <a class="ui-stepSequence">4</a>
+                            <p class="ui-stepName">填写安全信息</p>
+                        </td>
+                        <td class="ui-stepInfo">
+                            <a class="ui-stepSequence">5</a>
+                            <p class="ui-stepName">激活账户</p>
+                        </td>
+                        <td class="ui-stepInfo">
+                            <a class="ui-stepSequence">6</a>
+                            <p class="ui-stepName">完成注册</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    	</div>  
+    </div>
+    
+    
+    
+    
     <div class="image_bottom">
 		<iframe src="footer.html" frameborder="0"  scrolling="no" width="100%" height="200px"></iframe>
 	</div>
+    
     
     <!-- 菜单 (动态面板) -->
       <div id="u2" class="ax_image">
@@ -167,11 +167,5 @@
                 <p><span></span></p>
               </div>
             </div>
-            
-            
-          </div>
-        </div>
-      </div>
-    </div>
 </body>
 </html>

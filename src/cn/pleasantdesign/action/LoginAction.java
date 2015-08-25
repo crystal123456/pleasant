@@ -4,23 +4,15 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.apache.struts2.convention.annotation.Namespace;
-import org.apache.struts2.convention.annotation.Result;
-import org.apache.struts2.convention.annotation.Actions;
-import org.apache.struts2.convention.annotation.Action;
-
-import com.vanceinfo.framework.security.Des3Util;
-import com.vanceinfo.framework.web.struts2.Struts2Utils;
-
 import cn.pleasantdesign.entity.User;
 import cn.pleasantdesign.service.LoginService;
 import cn.pleasantdesign.utils.ApplicationConfig;
 import cn.pleasantdesign.utils.WebConstant;
 
-@Namespace("/user")
-@Actions({ @Action(value = "loginAction", results = {
-		@Result(name = "loginSuccess", location = "/home.jsp"),
-		@Result(name = "loginError", location = "/login.jsp")}) })
+import com.vanceinfo.framework.security.Des3Util;
+import com.vanceinfo.framework.web.struts2.Struts2Utils;
+
+
 public class LoginAction extends BaseAction {
 
 	/**

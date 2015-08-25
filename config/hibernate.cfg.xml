@@ -7,80 +7,15 @@
 		<!-- 驱动 -->
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		
-		<!-- 数据库url
-		jdbc:mysql://192.168.10.222:3306/hibernate_db 指定连接网络数据库
-		jdbc:mysql:///hibernate_db 表示连接本机数据库
-		 -->
 		<property name="hibernate.connection.url">jdbc:mysql:///hibernate_db</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password"></property>
 		
-		<!-- 数据库的方言：每个数据库都有别的数据库没有的一些东西，这个方言是支持事务的，其他的不支持 -->
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
 		
-		<!-- 将数据库语句打印出来 -->
-		<property name="show_sql">true</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
 		
-		<!-- 自动创建数据库表 
-		create-drop	在程序启动的时候创建数据库表，程序退出之后删除之前创建的表（测试的时候用）（这里的程序指的的SessionFactory）
-		create		在程序启动的时候先删除上一次创建的表，然后再创建新的表结构（测试的时候用）
-		update		在程序启动的时候如果没有表就创建表，有表的话就检查有没有更新（推荐使用）
-		validate	在程序启动的时候检查表结构，不会创建
-		-->
 		<property name="hibernate.hbm2ddl.auto">update</property>
-		
-		<!-- 线程安全session的配置 -->
-		<property name="hibernate.current_session_context_class">thread</property><!-- 开启线程安全的session -->
-		
-		<!-- 导入持久化配置类 -->
-		<mapping resource="model\Person.hbm.xml"></mapping>
-		<!-- 组件类 -->
-		<mapping resource="model\NewPerson.hbm.xml"></mapping>
-		<!-- 动态组件类 -->
-		<mapping resource="model\NewPerson1.hbm.xml"></mapping>
-		
-		<!-- 结合类配置 -->
-		<mapping resource="model\NewPerson2.hbm.xml"></mapping>
-		
-		<!-- 单表继承配置 -->
-		<mapping resource="jicheng\jichengPerson.hbm.xml"></mapping>
-		<mapping resource="singleTable\inherit\integer\PersonInteger.hbm.xml"></mapping>
-		
-		<!-- 具体表继承 -->
-		<mapping resource="concreteTable\PersonConcrete.hbm.xml"></mapping>
-		
-		<!-- 每个类对应一个表继承 -->
-		<mapping resource="hiloTable\PersonHilo.hbm.xml"></mapping>
-		
-		<!-- HQL -->
-		<mapping resource="hql\PersonHQL.hbm.xml"></mapping>
-		
-		<!-- 在配置文件中配置HQL -->
-		<mapping resource="hqlPeiZhi\PersonHQLPeiZhi.hbm.xml"></mapping>
-		<mapping resource="hqlPeiZhi\query.xml"></mapping>
-		
-		<!-- QBC配置 -->
-		<mapping resource="QBC\PersonQBC.hbm.xml"></mapping>
-		
-		<!-- SQL配置 -->
-		<mapping resource="SQL\PersonSQL.hbm.xml"></mapping>
-		<mapping resource="SQL\query.xml"></mapping>
-		
-		<!-- 数据抓取策略配置 -->
-		<mapping resource="fetch\PersonFetch.hbm.xml"></mapping>
-		
-		<!-- 锁的配置 -->
-		<mapping resource="lock\PersonLock.hbm.xml"></mapping>
-		
-		<!-- 过滤器的配置 -->
-		<mapping resource="filter\PersonFilter.hbm.xml"></mapping>
-		
-		<!-- 拦截器的配置 -->
-		<mapping resource="interceptor\PersonInterceptor.hbm.xml"></mapping>
-		<mapping resource="interceptor\AddressInterceptor.hbm.xml"></mapping>
-		
-		<!-- 多线程session安全的缓存的配置 -->
-		<mapping resource="cache\PersonCache.hbm.xml"></mapping>
-		
 	</session-factory>
 </hibernate-configuration>

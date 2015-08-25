@@ -2,33 +2,23 @@ package cn.pleasantdesign.entity;
 
 import java.util.Date;
 
-/**
- * 论坛帖子
- * @author fred
- *
- */
 public class Post {
 
-	// 帖子id
-	private Long id;
+	private int id;
 	
-	// 帖子主题
 	private String postName;
 	
-	// 帖子内容
 	private String content;
 	
-	// 发帖时间
 	private Date postTime;
 	
-	// 发帖人
 	private String userName;
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -64,6 +54,4 @@ public class Post {
 		this.userName = userName;
 	}
 	
-	
-
 }

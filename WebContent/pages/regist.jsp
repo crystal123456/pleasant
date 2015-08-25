@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>登录</title>
-	<link href="../css/login/login.css" type="text/css" rel="stylesheet"/>
- 	<link href="../css/menu/styles.css" type="text/css" rel="stylesheet"/>
- 
+<title>注册</title>
+	<link href="../css/regist/regist.css" type="text/css" rel="stylesheet"/>
+    <link href="../css/menu/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="../css/popdiv/popdiv.css" type="text/css" rel="stylesheet"/>
+    
 	<script src="../resources/scripts/jquery-1.7.1.min.js"></script>
     <script src="../resources/scripts/axure/axQuery.js"></script>
     <script src="../resources/scripts/axutils.js"></script>
@@ -30,36 +31,107 @@
     <script src="../resources/scripts/axure/init.temp.js"></script>
   	<script src="../resources/scripts/axure/legacy.js"></script>
     <script src="../js/menu/menu.js"></script>
+    <script src="../js/popdiv/popdiv.js"></script>
+	<style type="text/css">
+    
+    #tips{margin-top:5px}
+    #tips span{float:left;width:98px;height:20px;color:#fff;overflow:hidden;background:#ccc;margin-right:2px;line-height:20px;text-align:center;}
+    #tips.s1 .active{background:#f30;}
+    #tips.s2 .active{background:#fc0;}
+    #tips.s3 .active{background:#cc0;}
+    #tips.s4 .active{background:#090;}
+    </style>
+        
+    <script type="text/javascript">
+    window.onload = function ()
+    {
+     var oTips = document.getElementById("tips");
+     var oInput = document.getElementsByTagName("input")[1];
+     var aSpan = oTips.getElementsByTagName("span");
+     var aStr = ["弱", "中", "强"];
+     var i = 0; 
+     
+     oInput.onkeyup = oInput.onfocus = oInput.onblur = function ()
+     {
+      var index = checkStrong(this.value);
+      this.className = index ? "correct" : "error";
+      oTips.className = "s" + index;
+      for (i = 0; i < aSpan.length; i++)aSpan[i].className = aSpan[i].innerHTML = "";
+      index && (aSpan[index - 1].className = "active", aSpan[index - 1].innerHTML = aStr[index - 1])
+     }
+    };
+    /** 强度规则
+     + ------------------------------------------------------- +
+     1) 任何少于6个字符的组合，弱；任何字符数的同类字符组合，弱；
+     2) 任何字符数的两类字符组合，中；
+     3) 12位字符数以下的三类或四类字符组合，强；
+     + ------------------------------------------------------- +
+    **/
+    //检测密码强度
+    function checkStrong(sValue)
+    {
+     var modes = 0;
+     if (sValue.length < 6) return modes;
+     if (/\d/.test(sValue)) modes++; //数字
+     if (/[a-z]/.test(sValue)) modes++; //小写
+     if (/[A-Z]/.test(sValue)) modes++; //大写  
+     if (/\W/.test(sValue)) modes++; //特殊字符
+     switch (modes)
+     {
+      case 1:
+       return 1;
+       break;
+      case 2:
+       return 2;
+      case 3:
+      case 4:
+       return sValue.length < 12 ? 3 : 4
+       break;
+     }
+    }
+    </script>
 </head>
 <body>
+<!--注册协议-->
+    <div id="hidebg"></div>
+    <div id="hidebox" >
+        <div onClick="hide();">点击关闭</div>
+        <pre>
+        	注册协议
+            1.注册协议第一条
+            2.注册协议第二条
+            3.注册协议第三条
+        </pre>
+    </div>
+
+
 <div class="header">
     	<div class="div_logo">
-        	<img src="../images/login/logo.png" alt="" width="198" height="66">
+        	<img src="images/logo.png" alt="" width="198" height="66">
         </div>
     </div>
     <div >
     	<div class="user_login">
-        	<img src="../images/login/user_login.png" alt="" width="350" height="107" >
+        	<img src="images/regist/user_regist.png" alt="" width="350" height="107" >
         </div>
-	<div class="login_form">
-        <div class="white input_form" style="float:left">
-        	<form>
-        	<table height="100%">
-        	<tr>
-            	<td>
-                	<span class="login_header_span">登录</span>
-                </td>
-                <td>
-                	<span class="login_span">还没有账号？去</span>
-                    <a href="regist.html" class="login_link">注册></a>
-                </td>
-            </tr>
+<div class="login_form">
+			
+        	<div class="white input_form" style="float:left">
+            <div>
+            	<span class="login_header_span">注册新用户</span>
+                <span class="login_span">已有账号？去</span>
+                    <a href="login.html" class="login_link">登录></a>
+            </div>
+        	<table width="100%" height="100%">
             <tr>
-            	<td>
+            	<td width="70">
                 	<span class="login_span">用户名：</span>
                 </td>
                 <td>
                     <input type="text" class="login_input"/>                	
+                </td>
+                <td>
+                	<span>*注册后不可修改</span>
                 </td>
           </tr>
       <tr>
@@ -68,6 +140,43 @@
                 </td>
                 <td>
                 	<input type="password" class="login_input"/>
+                    <div id="tips">
+                    	<span></span><span></span><span></span>
+                    </div>
+                </td>
+                <td>
+                </td>
+          </tr>
+          <tr>
+            	<td>
+                	<span class="login_span">确认密码：</span>
+                </td>
+                <td>
+                	<input type="password" class="login_input"/>
+                </td>
+                <td>
+                </td>
+          </tr>
+          <tr>
+            	<td>
+                	<span class="login_span">邮箱：</span>
+                </td>
+                <td>
+                	<input type="password" class="login_input"/>
+                </td>
+                <td>
+                	<span>*注册后不可修改</span>
+                </td>
+          </tr>
+           <tr>
+            	<td>
+                	<span class="login_span">QQ：</span>
+                </td>
+                <td>
+                	<input type="password" class="login_input"/>
+                </td>
+                <td>
+                	<span>*注册后不可修改</span>
                 </td>
           </tr>
             <tr>
@@ -76,8 +185,7 @@
                 </td>
                 <td>
                 	<input type="text" class="login_input_small"/>
-                    &nbsp;<img id="jcaptcha" src="<%=request.getContextPath()%>/servlet/JcaptchaServlet" width="60" height="22" align="absmiddle" />
-                    <a href="javascript:getOther();" class="logon_link">看不清，换一张</a>
+                    <img/>
                 </td>
             </tr>
             <tr>
@@ -85,30 +193,29 @@
                 </td>
                 <td>
                 	<input type="checkbox"/>
-                	<span class="login_span_small">8小时内自动登录</span>
-                    &nbsp;&nbsp;<a href="#" class="login_link">忘记密码</a>
+                	<span class="login_span_small">已阅读，同意</span>
+                    &nbsp;&nbsp;<a href="JavaScript:show()" class="login_link">《注册协议》</a>
                 </td>
             </tr>
             <tr>
             	<td>
                 </td>
                 <td>
-                	<input type="button" value="登录" class="login_button"/>
+                	<input type="button" value="注册" class="login_button"/>
                 </td>
             </tr>
         </table>
-        </form>
         </div>
         <div class="white image_right" style="float:left">
-        	<img src="../images/login/login_right.png" alt="">
+        	<img src="images/login_right.png" alt="">
         </div>
         </div>
     </div>
-    <div class="image_bottom">
+    <div class="margin_top_600">
 		<iframe src="footer.html" frameborder="0"  scrolling="no" width="100%" height="200px"></iframe>
 	</div>
-    
-    <!-- 菜单 (动态面板) -->
+        
+   <!-- 菜单 (动态面板) -->
       <div id="u2" class="ax_image">
         <a href="home.html"><img id="u2_img" class="img " src="images/menu.png"/></a>
         <div id="u3" class="text">
@@ -166,9 +273,8 @@
               <div id="u16" class="text">
                 <p><span></span></p>
               </div>
-            </div>
-            
-            
+            </div> 
+      
           </div>
         </div>
       </div>
