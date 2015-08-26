@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+margin: 0px;
+padding: 0px;
+}
+
+.white{
+	color:#FFF;
+}
+
+.sub_icon{
+	vertical-align:super;
+	font-size:15px;
+}
+
+.yellow{
+	color:#f3d100;
+}
+
+.gray_mid{
+	color:#4c4f54;
+}
+
+.gray_light{
+	color:#e3e5e4;
+}
+
+.yellw_border{
+	height:3px;
+	background:#e2af00;
+}
+
+.float_left{
+	float:left;
+}
+
+.div_bottom{
+	padding-top:150px;
+	
+}
+
+.background_color{
+	background: #181b20;
+}
+
+.height_200{
+	height:200px;
+}
+
+.div_work{
+	position: relative;
+  	left: 40%;
+	margin-top:30px;
+}
+
+.span_work{
+	font-size:24px;
+	font-family:"Microsoft YaHei";
+}
+
+.span_message{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+}
+
+.div_message{
+	position: relative;
+  	left: 40%;
+}
+
+.div_design{
+	margin-top:50px;
+	position: relative;
+  	left: 40%;
+}
+
+.span_bottom{
+	font-size:12px;
+}
+
+.div_border{
+	padding-left:7.5%;
+	padding-top:15px;
+	border-top:1px dotted #4c4f54;
+}
+
+.span_design{
+	font-size:12px;
+	font-family:"Microsoft YaHei";
+}
+
+.div_clear{
+	clear:both;
+}
+
+.div-inline{ 
+	display:inline
+}
+
+.div_connection{
+	padding-left:400px;
+}
+
+.div_hidden{
+	visibility:hidden;
+}
+
+.pd_top_60{
+	padding-top:60px;
+}
+
