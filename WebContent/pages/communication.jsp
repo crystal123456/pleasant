@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>在线交流</title>
-	<link href="../css/communication.css" type="text/css" rel="stylesheet"/>
+	<link href="../css/communication/communication.css" type="text/css" rel="stylesheet"/>
 	<link href="../css/menu/styles.css" type="text/css" rel="stylesheet"/>
     
 	<script src="../resources/scripts/jquery-1.7.1.min.js"></script>
@@ -34,13 +34,13 @@
 <body>
 <div class="header">
     	<div class="div_logo">
-        	<img src="images/logo.png" alt="" width="198" height="66">
+        	<img src="../images/home/logo.png" alt="" width="198" height="66">
         </div>
 </div>
     
     
     <div>
-    	<img src="images/communication/communication.png" alt="" width="100%" height="429px">
+    	<img src="../images/communication/communication.png" alt="" width="100%" height="429px">
     </div>
     
     <div class="margin_left_200">
@@ -53,7 +53,7 @@
                     <span class="word_style_1">BUG OUT</span>
                 </div>
                 <div class="margin_top_5">
-                    <img src="images/communication/inner.png" width="300"/>
+                    <img src="../images/communication/inner.png" width="300"/>
                 </div>
                 <div class="margin_top_50 font_size_15">
                     <span>***时间上传</span>
@@ -70,12 +70,12 @@
     
     
     <div class="image_bottom">
-		<iframe src="footer.html" frameborder="0"  scrolling="no" width="100%" height="200px"></iframe>
+		<iframe src="footer.jsp" frameborder="0"  scrolling="no" width="100%" height="200px"></iframe>
 	</div>
 
 	 <!-- 菜单 (动态面板) -->
       <div id="u2" class="ax_image">
-        <a href="home.html"><img id="u2_img" class="img " src="images/menu.png"/></a>
+        <a href="home.jsp"><img id="u2_img" class="img " src="../images/menu/menu.png"/></a>
         <div id="u3" class="text">
           <p><span></span></p>
         </div>
@@ -87,7 +87,7 @@
 
 			<!-- 作品欣赏 -->
             <div id="u5" class="ax_image">
-              <a href="works.html"><img id="u5_img" class="img " src="images/home/u17.png"/></a>
+              <a href="works.jsp"><img id="u5_img" class="img " src="../images/menu/u17.png"/></a>
               <div id="u6" class="text">
                 <p><span></span></p>
               </div>
@@ -95,7 +95,7 @@
 
             <!-- 项目合作 -->
             <div id="u7" class="ax_image">
-              	<a href="cooperation.html"><img id="u7_img" class="img " src="images/home/u19.png"/></a>
+              	<a href="cooperation.jsp"><img id="u7_img" class="img " src="../images/menu/u19.png"/></a>
               <div id="u8" class="text">
                 <p><span></span></p>
               </div>
@@ -103,7 +103,7 @@
 
             <!-- 论坛bbs -->
             <div id="u9" class="ax_image">
-              <a href="communication.html"><img id="u9_img" class="img " src="images/home/u21.png"/></a>
+              <a href="communication.jsp"><img id="u9_img" class="img " src="../images/menu/u21.png"/></a>
               <div id="u10" class="text">
                 <p><span></span></p>
               </div>
@@ -111,7 +111,7 @@
 
             <!-- 关于悦杰 -->
             <div id="u11" class="ax_image">
-              <a href="about.html"><img id="u11_img" class="img " src="images/home/u23.png"/></a>
+              <a href="about.jsp"><img id="u11_img" class="img " src="../images/menu/u23.png"/></a>
               <div id="u12" class="text">
                 <p><span></span></p>
               </div>
@@ -119,7 +119,7 @@
 
             <!-- 加入我们 -->
             <div id="u13" class="ax_image">
-              <a href="joinus.html"><img id="u13_img" class="img " src="images/home/u25.png"/></a>
+              <a href="joinus.jsp"><img id="u13_img" class="img " src="../images/menu/u25.png"/></a>
               <div id="u14" class="text">
                 <p><span></span></p>
               </div>
@@ -127,7 +127,7 @@
 
             <!-- 登录 -->
             <div id="u15" class="ax_image">
-              <a href="login.html"><img id="u15_img" class="img " src="images/home/u27.png"/></a>
+              <a href="login.jsp"><img id="u15_img" class="img " src="../images/menu/u27.png"/></a>
               <div id="u16" class="text">
                 <p><span></span></p>
               </div>

@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link href="../footer/footer.css" type="text/css" rel="stylesheet"/>
+<link href="../css/footer/footer.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
@@ -39,7 +39,7 @@ function HiddenWeiXiny()
 }
 </script>
 </head>
-<body onload="MM_preloadImages('images/footer/weixin_yellow.png','images/footer/QQ_yellow.png','images/footer/mail_yellow.png','images/footer/phone_yellow.png','images/footer/location_yellow.png')">
+<body onload="MM_preloadImages('../images/footer/weixin_yellow.png','../images/footer/QQ_yellow.png','../images/footer/mail_yellow.png','../images/footer/phone_yellow.png','../images/footer/location_yellow.png')">
 <div class="background_color height_200">
     	<div class="yellw_border">
         </div>
@@ -59,23 +59,23 @@ function HiddenWeiXiny()
             </div>
             <div class="float_left div_connection">
             	<div id="WeiXin" class="div_hidden">
-                        <img src="images/footer/pleasantdesign_67.png" />
+                        <img src="../images/footer/pleasantdesign_67.png" />
                 </div>
             	<div>
                     <div class="div-inline">
-                        <a href="#" onmouseout="MM_swapImgRestore();HiddenWeiXiny()" onmouseover="MM_swapImage('weixin','','images/footer/weixin_yellow.png',1);ShowWeiXin()"><img src="images/footer/weixin_gray.png" name="weixin" width="45" height="45" border="0" id="weixin" /></a>
+                        <a href="#" onmouseout="MM_swapImgRestore();HiddenWeiXiny()" onmouseover="MM_swapImage('weixin','','../images/footer/weixin_yellow.png',1);ShowWeiXin()"><img src="../images/footer/weixin_gray.png" name="weixin" width="45" height="45" border="0" id="weixin" /></a>
                     </div>
                     <div class="div-inline">
-                    <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('QQ','','images/footer/QQ_yellow.png',1)"><img src="images/footer/QQ_gray.png" name="QQ" width="45" height="45" border="0" id="QQ" /></a>
+                    <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('QQ','','../images/footer/QQ_yellow.png',1)"><img src="../images/footer/QQ_gray.png" name="QQ" width="45" height="45" border="0" id="QQ" /></a>
                     </div>
                   <div class="div-inline">
-                <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('mail','','images/footer/mail_yellow.png',1)"><img src="images/footer/mail_gray.png" name="mail" width="45" height="45" border="0" id="mail" /></a>
+                <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('mail','','../images/footer/mail_yellow.png',1)"><img src="../images/footer/mail_gray.png" name="mail" width="45" height="45" border="0" id="mail" /></a>
                     </div>
                     <div class="div-inline">
-                  <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('phone','','images/footer/phone_yellow.png',1)"><img src="images/footer/phone_gray.png" name="phone" width="45" height="45" border="0" id="phone" /></a>
+                  <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('phone','','../images/footer/phone_yellow.png',1)"><img src="../images/footer/phone_gray.png" name="phone" width="45" height="45" border="0" id="phone" /></a>
                     </div>
                     <div class="div-inline">
-                    <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('location','','images/footer/location_yellow.png',1)"><img src="images/footer/location_gray.png" name="location" width="45" height="45" border="0" id="location" /></a>
+                    <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('location','','../images/footer/location_yellow.png',1)"><img src="../images/footer/location_gray.png" name="location" width="45" height="45" border="0" id="location" /></a>
                     </div>
                 </div>
             </div>

@@ -107,12 +107,12 @@
 
 <div class="header">
     	<div class="div_logo">
-        	<img src="images/logo.png" alt="" width="198" height="66">
+        	<img src="../images/home/logo.png" alt="" width="198" height="66">
         </div>
     </div>
     <div >
     	<div class="user_login">
-        	<img src="images/regist/user_regist.png" alt="" width="350" height="107" >
+        	<img src="../images/regist/user_regist.png" alt="" width="350" height="107" >
         </div>
 <div class="login_form">
 			
@@ -207,17 +207,17 @@
         </table>
         </div>
         <div class="white image_right" style="float:left">
-        	<img src="images/login_right.png" alt="">
+        	<img src="../images/login/login_right.png" alt="">
         </div>
         </div>
     </div>
     <div class="margin_top_600">
-		<iframe src="footer.html" frameborder="0"  scrolling="no" width="100%" height="200px"></iframe>
+		<iframe src="footer.jsp" frameborder="0"  scrolling="no" width="100%" height="200px"></iframe>
 	</div>
         
    <!-- 菜单 (动态面板) -->
       <div id="u2" class="ax_image">
-        <a href="home.html"><img id="u2_img" class="img " src="images/menu.png"/></a>
+        <a href="home.jsp"><img id="u2_img" class="img " src="../images/menu/menu.png"/></a>
         <div id="u3" class="text">
           <p><span></span></p>
         </div>
@@ -229,7 +229,7 @@
 
 			<!-- 作品欣赏 -->
             <div id="u5" class="ax_image">
-              <a href="works.html"><img id="u5_img" class="img " src="images/home/u17.png"/></a>
+              <a href="works.jsp"><img id="u5_img" class="img " src="../images/menu/u17.png"/></a>
               <div id="u6" class="text">
                 <p><span></span></p>
               </div>
@@ -237,7 +237,7 @@
 
             <!-- 项目合作 -->
             <div id="u7" class="ax_image">
-              	<a href="cooperation.html"><img id="u7_img" class="img " src="images/home/u19.png"/></a>
+              	<a href="cooperation.jsp"><img id="u7_img" class="img " src="../images/menu/u19.png"/></a>
               <div id="u8" class="text">
                 <p><span></span></p>
               </div>
@@ -245,7 +245,7 @@
 
             <!-- 论坛bbs -->
             <div id="u9" class="ax_image">
-              <a href="communication.html"><img id="u9_img" class="img " src="images/home/u21.png"/></a>
+              <a href="communication.jsp"><img id="u9_img" class="img " src="../images/menu/u21.png"/></a>
               <div id="u10" class="text">
                 <p><span></span></p>
               </div>
@@ -253,7 +253,7 @@
 
             <!-- 关于悦杰 -->
             <div id="u11" class="ax_image">
-              <a href="about.html"><img id="u11_img" class="img " src="images/home/u23.png"/></a>
+              <a href="about.jsp"><img id="u11_img" class="img " src="../images/menu/u23.png"/></a>
               <div id="u12" class="text">
                 <p><span></span></p>
               </div>
@@ -261,7 +261,7 @@
 
             <!-- 加入我们 -->
             <div id="u13" class="ax_image">
-              <a href="joinus.html"><img id="u13_img" class="img " src="images/home/u25.png"/></a>
+              <a href="joinus.jsp"><img id="u13_img" class="img " src="../images/menu/u25.png"/></a>
               <div id="u14" class="text">
                 <p><span></span></p>
               </div>
@@ -269,11 +269,11 @@
 
             <!-- 登录 -->
             <div id="u15" class="ax_image">
-              <a href="login.html"><img id="u15_img" class="img " src="images/home/u27.png"/></a>
+              <a href="login.jsp"><img id="u15_img" class="img " src="../images/menu/u27.png"/></a>
               <div id="u16" class="text">
                 <p><span></span></p>
               </div>
-            </div> 
+            </div>
       
           </div>
         </div>

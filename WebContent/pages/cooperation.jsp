@@ -54,16 +54,16 @@ function MM_swapImage() { //v3.0
 }
     </script>
 </head>
-<body onload="MM_preloadImages('images/cooperation/u53_mouseOver.png','images/cooperation/u55_mouseOver.png')">
+<body onload="MM_preloadImages('../images/cooperation/u53_mouseOver.png','../images/cooperation/u55_mouseOver.png')">
 
 <div class="header">
     	<div class="div_logo">
-        	<img src="images/logo.png" alt="" width="198" height="66">
+        	<img src="../images/home/logo.png" alt="" width="198" height="66">
         </div>
 </div>
     
     <div class="cooperation">
-    	<img src="images/cooperation/cooperation.png" alt="" height="100%">
+    	<img src="../images/cooperation/cooperation.png" alt="" height="100%">
     </div>
     
 
@@ -72,12 +72,12 @@ function MM_swapImage() { //v3.0
         	<tr>
             	<td>
                 	<span>
-            	<input type="button"  value="合作前" class="cooperation_before" id="before" onmouseover="this.style.background='url(images/cooperation/u6_mouseOver.png)'" onmouseout="this.style.background='url(images/cooperation/u6.png)'"/>
+            	<input type="button"  value="合作前" class="cooperation_before" id="before" onmouseover="this.style.background='url(../images/cooperation/u6_mouseOver.png)'" onmouseout="this.style.background='url(../images/cooperation/u6.png)'"/>
             </span>
                 </td>
                 <td>
                 <span>
-            	<input type="button"  value="合作后" class="cooperation_after" id="after" onmouseover="this.style.background='url(images/cooperation/u6_mouseOver.png)'" onmouseout="this.style.background='url(images/cooperation/u6.png)'"/>
+            	<input type="button"  value="合作后" class="cooperation_after" id="after" onmouseover="this.style.background='url(../images/cooperation/u6_mouseOver.png)'" onmouseout="this.style.background='url(../images/cooperation/u6.png)'"/>
             </span>
                 </td>
             </tr>
@@ -92,8 +92,8 @@ function MM_swapImage() { //v3.0
             <tr>
             	<td>
                 <div class="image_qq_mail">
-           	    <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('qq','','images/cooperation/u53_mouseOver.png',1)"><img src="images/cooperation/u53.png" name="qq" width="50" height="43" border="0" id="qq" /></a>
-                <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('mail','','images/cooperation/u55_mouseOver.png',1)"><img src="images/cooperation/u55.png" name="mail" width="50" height="43" border="0" id="mail" /></a>
+           	    <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('qq','','../images/cooperation/u53_mouseOver.png',1)"><img src="../images/cooperation/u53.png" name="qq" width="50" height="43" border="0" id="qq" /></a>
+                <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('mail','','../images/cooperation/u55_mouseOver.png',1)"><img src="../images/cooperation/u55.png" name="mail" width="50" height="43" border="0" id="mail" /></a>
                 </div>
                 </td>
                 <td>
@@ -103,17 +103,17 @@ function MM_swapImage() { //v3.0
     </div>
     
     <div class="margin_top_300">
-    	<img src="images/cooperation/down.png" alt="" height="100%">
+    	<img src="../images/cooperation/down.png" alt="" height="100%">
     </div>
     
  
  <div>
-		<iframe src="footer.html" frameborder="0"  scrolling="no" width="100%" height="200px"></iframe>
+		<iframe src="footer.jsp" frameborder="0"  scrolling="no" width="100%" height="200px"></iframe>
 </div>   
     
      <!-- 菜单 (动态面板) -->
       <div id="u2" class="ax_image">
-        <a href="home.html"><img id="u2_img" class="img " src="images/menu.png"/></a>
+        <a href="home.jsp"><img id="u2_img" class="img " src="../images/menu/menu.png"/></a>
         <div id="u3" class="text">
           <p><span></span></p>
         </div>
@@ -125,7 +125,7 @@ function MM_swapImage() { //v3.0
 
 			<!-- 作品欣赏 -->
             <div id="u5" class="ax_image">
-              <a href="works.html"><img id="u5_img" class="img " src="images/home/u17.png"/></a>
+              <a href="works.jsp"><img id="u5_img" class="img " src="../images/menu/u17.png"/></a>
               <div id="u6" class="text">
                 <p><span></span></p>
               </div>
@@ -133,7 +133,7 @@ function MM_swapImage() { //v3.0
 
             <!-- 项目合作 -->
             <div id="u7" class="ax_image">
-              	<a href="cooperation.html"><img id="u7_img" class="img " src="images/home/u19.png"/></a>
+              	<a href="cooperation.jsp"><img id="u7_img" class="img " src="../images/menu/u19.png"/></a>
               <div id="u8" class="text">
                 <p><span></span></p>
               </div>
@@ -141,7 +141,7 @@ function MM_swapImage() { //v3.0
 
             <!-- 论坛bbs -->
             <div id="u9" class="ax_image">
-              <a href="communication.html"><img id="u9_img" class="img " src="images/home/u21.png"/></a>
+              <a href="communication.jsp"><img id="u9_img" class="img " src="../images/menu/u21.png"/></a>
               <div id="u10" class="text">
                 <p><span></span></p>
               </div>
@@ -149,7 +149,7 @@ function MM_swapImage() { //v3.0
 
             <!-- 关于悦杰 -->
             <div id="u11" class="ax_image">
-              <a href="about.html"><img id="u11_img" class="img " src="images/home/u23.png"/></a>
+              <a href="about.jsp"><img id="u11_img" class="img " src="../images/menu/u23.png"/></a>
               <div id="u12" class="text">
                 <p><span></span></p>
               </div>
@@ -157,7 +157,7 @@ function MM_swapImage() { //v3.0
 
             <!-- 加入我们 -->
             <div id="u13" class="ax_image">
-              <a href="joinus.html"><img id="u13_img" class="img " src="images/home/u25.png"/></a>
+              <a href="joinus.jsp"><img id="u13_img" class="img " src="../images/menu/u25.png"/></a>
               <div id="u14" class="text">
                 <p><span></span></p>
               </div>
@@ -165,7 +165,7 @@ function MM_swapImage() { //v3.0
 
             <!-- 登录 -->
             <div id="u15" class="ax_image">
-              <a href="login.html"><img id="u15_img" class="img " src="images/home/u27.png"/></a>
+              <a href="login.jsp"><img id="u15_img" class="img " src="../images/menu/u27.png"/></a>
               <div id="u16" class="text">
                 <p><span></span></p>
               </div>

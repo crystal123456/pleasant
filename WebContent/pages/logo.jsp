@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>logo</title>
 <link href="../resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
     <link href="../resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
     <link href="../data/styles.css" type="text/css" rel="stylesheet"/>
